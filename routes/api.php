@@ -10,3 +10,24 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('refresh', 'refresh');
 
 });
+
+
+///////////////// register with facebook using laravel socialite
+Route::get('/auth/facebook', SocialiteController::class ,'redirectToFacebook');
+Route::get('/auth/facebook/callback', SocialiteController::class ,'handleFacebookCallback');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
